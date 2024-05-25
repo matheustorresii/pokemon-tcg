@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		FC30FFB32C027081006AF757 /* PokemonTCGApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC30FFB22C027081006AF757 /* PokemonTCGApp.swift */; };
-		FC30FFB52C027081006AF757 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC30FFB42C027081006AF757 /* ContentView.swift */; };
 		FC30FFB72C027084006AF757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC30FFB62C027084006AF757 /* Assets.xcassets */; };
 		FC30FFBA2C027084006AF757 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC30FFB92C027084006AF757 /* Preview Assets.xcassets */; };
+		FC30FFC22C027B98006AF757 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = FC30FFC12C027B98006AF757 /* Swinject */; };
+		FC30FFC42C027B98006AF757 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = FC30FFC32C027B98006AF757 /* Swinject-Dynamic */; };
+		FC30FFD02C027DAD006AF757 /* NavigableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC30FFCF2C027DAD006AF757 /* NavigableView.swift */; };
+		FC30FFD22C027DCE006AF757 /* FlowRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC30FFD12C027DCE006AF757 /* FlowRoute.swift */; };
+		FC30FFD42C027E1C006AF757 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC30FFD32C027E1C006AF757 /* AppCoordinator.swift */; };
+		FC30FFD62C027E6D006AF757 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC30FFD52C027E6D006AF757 /* View+Extensions.swift */; };
+		FC30FFD92C027EBC006AF757 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC30FFD82C027EBC006AF757 /* HomeScreen.swift */; };
+		FC30FFDB2C027F9B006AF757 /* FlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC30FFDA2C027F9B006AF757 /* FlowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FC30FFAF2C027081006AF757 /* PokemonTCG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonTCG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC30FFB22C027081006AF757 /* PokemonTCGApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTCGApp.swift; sourceTree = "<group>"; };
-		FC30FFB42C027081006AF757 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FC30FFB62C027084006AF757 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC30FFB92C027084006AF757 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FC30FFCF2C027DAD006AF757 /* NavigableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigableView.swift; sourceTree = "<group>"; };
+		FC30FFD12C027DCE006AF757 /* FlowRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowRoute.swift; sourceTree = "<group>"; };
+		FC30FFD32C027E1C006AF757 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FC30FFD52C027E6D006AF757 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		FC30FFD82C027EBC006AF757 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		FC30FFDA2C027F9B006AF757 /* FlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC30FFC22C027B98006AF757 /* Swinject in Frameworks */,
+				FC30FFC42C027B98006AF757 /* Swinject-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +65,10 @@
 		FC30FFB12C027081006AF757 /* PokemonTCG */ = {
 			isa = PBXGroup;
 			children = (
-				FC30FFB22C027081006AF757 /* PokemonTCGApp.swift */,
-				FC30FFB42C027081006AF757 /* ContentView.swift */,
-				FC30FFB62C027084006AF757 /* Assets.xcassets */,
 				FC30FFB82C027084006AF757 /* Preview Content */,
+				FC30FFC52C027D48006AF757 /* Source */,
+				FC30FFB62C027084006AF757 /* Assets.xcassets */,
+				FC30FFB22C027081006AF757 /* PokemonTCGApp.swift */,
 			);
 			path = PokemonTCG;
 			sourceTree = "<group>";
@@ -65,6 +79,99 @@
 				FC30FFB92C027084006AF757 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FC30FFC52C027D48006AF757 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FC30FFC62C027D6E006AF757 /* Commons */,
+				FC30FFC72C027D74006AF757 /* Domain */,
+				FC30FFC92C027D7D006AF757 /* UI */,
+				FC30FFC82C027D7A006AF757 /* Utils */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		FC30FFC62C027D6E006AF757 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				FC30FFCC2C027D8D006AF757 /* Navigation */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		FC30FFC72C027D74006AF757 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FC30FFCD2C027D91006AF757 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FC30FFC82C027D7A006AF757 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FC30FFCE2C027D99006AF757 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FC30FFC92C027D7D006AF757 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FC30FFCB2C027D86006AF757 /* Components */,
+				FC30FFCA2C027D83006AF757 /* Features */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FC30FFCA2C027D83006AF757 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				FC30FFD72C027EB6006AF757 /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		FC30FFCB2C027D86006AF757 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FC30FFCC2C027D8D006AF757 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FC30FFD32C027E1C006AF757 /* AppCoordinator.swift */,
+				FC30FFD12C027DCE006AF757 /* FlowRoute.swift */,
+				FC30FFDA2C027F9B006AF757 /* FlowView.swift */,
+				FC30FFCF2C027DAD006AF757 /* NavigableView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		FC30FFCD2C027D91006AF757 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FC30FFCE2C027D99006AF757 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FC30FFD52C027E6D006AF757 /* View+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FC30FFD72C027EB6006AF757 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FC30FFD82C027EBC006AF757 /* HomeScreen.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +190,10 @@
 			dependencies = (
 			);
 			name = PokemonTCG;
+			packageProductDependencies = (
+				FC30FFC12C027B98006AF757 /* Swinject */,
+				FC30FFC32C027B98006AF757 /* Swinject-Dynamic */,
+			);
 			productName = PokemonTCG;
 			productReference = FC30FFAF2C027081006AF757 /* PokemonTCG.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +222,9 @@
 				Base,
 			);
 			mainGroup = FC30FFA62C027081006AF757;
+			packageReferences = (
+				FC30FFC02C027B98006AF757 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = FC30FFB02C027081006AF757 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +251,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC30FFB52C027081006AF757 /* ContentView.swift in Sources */,
+				FC30FFD42C027E1C006AF757 /* AppCoordinator.swift in Sources */,
+				FC30FFDB2C027F9B006AF757 /* FlowView.swift in Sources */,
+				FC30FFD02C027DAD006AF757 /* NavigableView.swift in Sources */,
+				FC30FFD92C027EBC006AF757 /* HomeScreen.swift in Sources */,
+				FC30FFD22C027DCE006AF757 /* FlowRoute.swift in Sources */,
+				FC30FFD62C027E6D006AF757 /* View+Extensions.swift in Sources */,
 				FC30FFB32C027081006AF757 /* PokemonTCGApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -278,8 +397,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,9 +405,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.matheustorres.PokemonTCG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,8 +429,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +437,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.matheustorres.PokemonTCG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -344,6 +469,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC30FFC02C027B98006AF757 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC30FFC12C027B98006AF757 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC30FFC02C027B98006AF757 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		FC30FFC32C027B98006AF757 /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC30FFC02C027B98006AF757 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FC30FFA72C027081006AF757 /* Project object */;
 }

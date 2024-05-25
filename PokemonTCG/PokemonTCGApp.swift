@@ -11,7 +11,7 @@ import SwiftUI
 struct PokemonTCGApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FlowView()
         }
     }
 }
