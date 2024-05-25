@@ -8,7 +8,7 @@
 import Combine
 import SwiftUI
 
-final class AppCoordinator: ObservableObject {
+final class AppCoordinator: AppCoordinatorProtocol {
     
     // MARK: - PUBLIC PROPERTIES
     
@@ -16,18 +16,20 @@ final class AppCoordinator: ObservableObject {
     
     // MARK: - PRIVATE PROPERTIES
     
+    private let factory: FactoryProtocol
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - INITIALIZERS
     
-    init(path: NavigationPath) {
+    init(path: NavigationPath, factory: FactoryProtocol) {
         self.path = path
+        self.factory = factory
     }
     
     // MARK: - PUBLIC METHODS
     
     @ViewBuilder
-    func build(route: FlowRoute) -> some View {
+    func build(route: FlowRoute) -> AnyView {
         viewFor(route: route).toAny()
     }
     
@@ -35,7 +37,7 @@ final class AppCoordinator: ObservableObject {
     
     private func viewFor(route: FlowRoute) -> any NavigableView {
         let view: any NavigableView = switch route {
-            case .home: HomeScreen()
+            case .home: factory.makeHomeScreen()
         }
         bind(view: view)
         return view

@@ -7,11 +7,15 @@
 
 import SwiftUI
 
-struct FlowView: View {
+struct FlowView<AppCoordinator>: View where AppCoordinator: AppCoordinatorProtocol {
     
     // MARK: - PRIVATE PROPERTIES
     
-    @StateObject private var appCoordinator = AppCoordinator(path: .init())
+    @StateObject private var appCoordinator: AppCoordinator
+    
+    init(appCoordinator: AppCoordinator) {
+        self._appCoordinator = StateObject(wrappedValue: appCoordinator)
+    }
     
     // MARK: - BODY
     

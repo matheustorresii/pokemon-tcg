@@ -6,12 +6,28 @@
 //
 
 import SwiftUI
+import Swinject
 
 @main
 struct PokemonTCGApp: App {
+    
+    // MARK: - PRIVATE PROPERTIES
+    
+    private let assembler: Assembler
+    
+    init() {
+        assembler = {
+            var assemblies = [Assembly]()
+            assemblies.append(contentsOf: DependencyGraph.build())
+            return Assembler(assemblies)
+        }()
+    }
+    
+    // MARK: - BODY
+    
     var body: some Scene {
         WindowGroup {
-            FlowView()
+            FlowView(appCoordinator: assembler.resolver.resolveUnwrapping(AppCoordinator.self))
         }
     }
 }
