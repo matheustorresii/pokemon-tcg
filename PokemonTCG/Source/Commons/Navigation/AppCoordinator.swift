@@ -35,8 +35,7 @@ final class AppCoordinator: ObservableObject {
     
     private func viewFor(route: FlowRoute) -> any NavigableView {
         let view: any NavigableView = switch route {
-        case .home: 
-            HomeScreen()
+            case .home: HomeScreen()
         }
         bind(view: view)
         return view
