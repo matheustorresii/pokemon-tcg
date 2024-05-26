@@ -28,6 +28,9 @@
 		FC9A8CE12C029B68007C67B8 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A8CE02C029B68007C67B8 /* Factory.swift */; };
 		FC9A8CE32C029B6D007C67B8 /* FactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A8CE22C029B6D007C67B8 /* FactoryProtocol.swift */; };
 		FC9A8CE92C02A28D007C67B8 /* HomeScreenProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A8CE82C02A28D007C67B8 /* HomeScreenProtocol.swift */; };
+		FCA839952C02BBB000E698CE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA839942C02BBB000E698CE /* String+Extensions.swift */; };
+		FCA839972C02BC0F00E698CE /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA839962C02BC0F00E698CE /* Collection+Extensions.swift */; };
+		FCA8399A2C02BE1D00E698CE /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FCA839992C02BE1D00E698CE /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,9 @@
 		FC9A8CE02C029B68007C67B8 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		FC9A8CE22C029B6D007C67B8 /* FactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryProtocol.swift; sourceTree = "<group>"; };
 		FC9A8CE82C02A28D007C67B8 /* HomeScreenProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenProtocol.swift; sourceTree = "<group>"; };
+		FCA839942C02BBB000E698CE /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		FCA839962C02BC0F00E698CE /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		FCA839992C02BE1D00E698CE /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				FC30FFB82C027084006AF757 /* Preview Content */,
+				FCA839982C02BD0200E698CE /* Resources */,
 				FC30FFC52C027D48006AF757 /* Source */,
 				FC30FFB62C027084006AF757 /* Assets.xcassets */,
 				FC30FFB22C027081006AF757 /* PokemonTCGApp.swift */,
@@ -183,8 +190,10 @@
 		FC30FFCE2C027D99006AF757 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FC30FFD52C027E6D006AF757 /* View+Extensions.swift */,
+				FCA839962C02BC0F00E698CE /* Collection+Extensions.swift */,
 				FC9A8CDD2C02930D007C67B8 /* Resolver+Extensions.swift */,
+				FCA839942C02BBB000E698CE /* String+Extensions.swift */,
+				FC30FFD52C027E6D006AF757 /* View+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -236,6 +245,14 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
+		FCA839982C02BD0200E698CE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FCA839992C02BE1D00E698CE /* Localizable.xcstrings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -283,6 +300,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = FC30FFA62C027081006AF757;
 			packageReferences = (
@@ -304,6 +322,7 @@
 			files = (
 				FC30FFBA2C027084006AF757 /* Preview Assets.xcassets in Resources */,
 				FC30FFB72C027084006AF757 /* Assets.xcassets in Resources */,
+				FCA8399A2C02BE1D00E698CE /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,12 +359,14 @@
 				FC9A8CDC2C029238007C67B8 /* AppCoordinatorProtocol.swift in Sources */,
 				FC9A8CCF2C028C96007C67B8 /* DependencyGraph.swift in Sources */,
 				FC30FFDB2C027F9B006AF757 /* FlowView.swift in Sources */,
+				FCA839952C02BBB000E698CE /* String+Extensions.swift in Sources */,
 				FC9A8CD92C028DEB007C67B8 /* HomeViewState.swift in Sources */,
 				FC9A8CD32C028D8A007C67B8 /* HomeViewModel.swift in Sources */,
 				FC9A8CE92C02A28D007C67B8 /* HomeScreenProtocol.swift in Sources */,
 				FC30FFD02C027DAD006AF757 /* NavigableView.swift in Sources */,
 				FC9A8CD12C028C9E007C67B8 /* ContainerAssembly.swift in Sources */,
 				FC30FFD92C027EBC006AF757 /* HomeScreen.swift in Sources */,
+				FCA839972C02BC0F00E698CE /* Collection+Extensions.swift in Sources */,
 				FC9A8CD52C028D92007C67B8 /* HomeViewModelProtocol.swift in Sources */,
 				FC9A8CE32C029B6D007C67B8 /* FactoryProtocol.swift in Sources */,
 				FC30FFD22C027DCE006AF757 /* FlowRoute.swift in Sources */,
